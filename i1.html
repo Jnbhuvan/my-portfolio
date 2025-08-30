@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jainag Bhuvan | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+    
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* === Navbar === */
+.navbar {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+.navbar-link {
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #dc2626;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #dc2626;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile menu */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* === Hero Section === */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=2069&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  /* filter: grayscale(80%); */
+  box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-content {
+  max-width: 900px;
+  animation: fadeInUp 1.5s ease-out forwards;
+  
+  background-color:rgba(0, 0, 0, 0.671);
+  padding-bottom:2rem;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #fff, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: #bbb;
+  background-color:rgba(0, 0, 0, 0.824);
+}
+
+.hero-description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #aaa;
+  
+}
+
+.hero-button {
+  background: linear-gradient(45deg, #dc2626, #b91c1c);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+}
+
+/* === History Section === */
+.history-section {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+              url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.history-content {
+  max-width: 1000px;
+  margin: 0 auto;
+ 
+}
+
+.history-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.history-section h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #dc2626;
+  display: block;
+  margin-top: 10px;
+}
+.history-section p {
+  margin-bottom: 1.2rem;
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* === Interests Section === */
+.interests {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+              url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.interests h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.interests-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.inter {
+  background: rgba(30, 30, 30, 0.85);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  width: 280px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.inter:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(220,38,38,0.5);
+}
+
+.inter img {
+  width: 100px;
+  margin-bottom: 1rem;
+  filter: invert(100%);
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* === Responsive Breakpoints === */
+@media (max-width: 640px) {
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    padding: 1rem;
+  }
+  .navbar-list.active {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: flex;
+  }
+  .hero-title { font-size: 2rem; }
+}
+
+@media (min-width: 769px) {
+  .hero-section {
+    flex-direction: row;
+    text-align: left;
+    padding: 6rem 2rem;
+  }
+  .hero-content {
+    padding-left: 3rem;
+  }
+  .hero-image {
+    max-width: 350px;
+  }
+  .history-section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 6rem 3rem;
+  }
+}
+</style>
+</head>
+
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <button class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-list">
+        <li class="navbar-item"><a href="#home" class="navbar-link">Home</a></li>
+        <li class="navbar-item"><a href="#about" class="navbar-link">About</a></li>
+        <li class="navbar-item"><a href="#projects" class="navbar-link">Projects</a></li>
+        <li class="navbar-item"><a href="#skills" class="navbar-link">Skills</a></li>
+        <li class="navbar-item"><a href="#contact" class="navbar-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <img src="image.png" alt="Profile photo of Jainag Bhuvan" class="hero-image">
+    <div class="hero-content">
+      <h1 class="hero-title">Jainag Bhuvan</h1>
+      <p class="hero-subtitle">Aspiring Data Analyst | Problem Solver | Storyteller with Data</p>
+      <p class="hero-description">I am passionate about uncovering insights from data and transforming raw numbers into actionable strategies. With skills in data visualization, statistical analysis, and business intelligence tools, I aim to bridge the gap between data and decision-making.</p>
+      <a href="#projects"><button class="hero-button">View My Work</button></a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="history-section" id="about">
+    <div class="history-content">
+      <h2>About Me</h2>
+      <p>Hello! I’m Jainag, a data enthusiast with a background in analyzing, visualizing, and interpreting data. My journey into data analytics started with curiosity about patterns and insights hidden in numbers, and it quickly grew into a career path.</p>
+      <p>I enjoy working with tools like Python, SQL, Excel, and Tableau to solve real-world problems. Whether it’s optimizing processes, finding trends, or building dashboards, I believe in using data to drive smarter decisions.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="interests" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="interests-wrapper">
+      <div class="inter" onclick="window.location.href='https://app.powerbi.com/groups/me/dashboards/42c0d89e-f649-4e20-a107-3579bbedccdb?ctid=840f859c-9de6-42e1-bb24-49ee394e5505&pbi_source=linkShare'">
+        <img src="ZDA.png" alt="Sales Dashboard" class="interestImg">
+        <h3>Zomato Dataset Analysis</h3>
+        <p>In this project, I got an opportunity to create an interactive dashboard in Power BI Service using a Zomato dataset sourced from Kaggle. The data was cleaned, transformed, and visualized in Power BI Desktop to derive insights related to restaurant pricing, ratings, popularity, and cuisine performance across multiple cities.</p>
+      </div>
+      <div class="inter" onclick="window.location.href=''">
+        <img src="ADA.png" alt="Customer Segmentation" class="interestImg">
+        <h3>Retail Sales Data Analysis </h3>
+        <p>Cleaned and prepared a retail sales dataset in PostgreSQL by removing null value records and executing advanced SQL queries. Connected the PostgreSQL database to Power BI Desktop to create visualizations and conduct further sales trend analysis.</p>
+      </div>
+      <div class="inter" onclick="window.location.href='https://app.powerbi.com/groups/me/dashboards/ff27ac8c-01e8-48f1-b02e-ab8f57e2e212?ctid=840f859c-9de6-42e1-bb24-49ee394e5505&pbi_source=linkShare'">
+        <img src="ASDA.png" alt="Survey Analysis" class="interestImg">
+        <h3>Amazon sales data analysis</h3>
+        <p>I worked with a Kaggle dataset of 120K+ rows, tackling missing values and inconsistencies using Python (Pandas). Performed extensive data cleaning and transformation to prepare it for analysis. Used SQL to filter, aggregate, and reshape the data for deeper insights. Built an interactive Power BI dashboard showing category-wise sales, monthly trends, city performance, and promo impact. Published the dashboard via Power BI Service (Microsoft Fabric) for seamless sharing and collaboration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="history-section" id="skills">
+    <div class="history-content">
+      <h2>Skills</h2>
+      <p><strong>Programming & Analysis:</strong> Python (Pandas, NumPy, Matplotlib), SQL, R</p>
+      <p><strong>Visualization:</strong> Tableau, Power BI, Excel (Pivot Tables, Charts)</p>
+      <p><strong>Other:</strong> Data Cleaning, Data Storytelling, Statistical Analysis</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="interests" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="interests-wrapper">
+      
+      <div class="inter">
+        <img src="linkedin.png" alt="LinkedIn" class="interestImg">
+        <h3>LinkedIn</h3>
+        <p><a href="https://www.linkedin.com/in/bhuvan-jn/" target="_blank" style="color:#fff;">linkedin.com/in/jainag</a></p>
+      </div>
+      <div class="inter">
+        <img src="github.png" alt="GitHub" class="interestImg">
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/Jnbhuvan" target="_blank" style="color:#fff;">github.com/jainag</a></p>
+      </div>
+      <div class="inter">
+        <img src="gmail.png" alt="Email" class="interestImg">
+        <h3>Email</h3>
+        <p><a href="mailto:jnbhuvan01@gmail.com" style="color:#fff;">jnbhuvan01@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.navbar-toggle').addEventListener('click', function() {
+      document.querySelector('.navbar-list').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
