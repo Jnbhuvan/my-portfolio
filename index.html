@@ -316,6 +316,69 @@ body {
     padding: 6rem 3rem;
   }
 }
+.skills-section {
+  background: #f8faff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(70, 106, 212, 0.07);
+  padding: 40px 32px;
+  margin-bottom: 32px;
+  max-width: 700px;
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skills-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #3849ce;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.skill-category {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #eaf3fd;
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 2px 6px rgba(56, 73, 206, 0.11);
+  transition: box-shadow 0.2s;
+}
+
+.skill-category:hover {
+  box-shadow: 0 4px 18px rgba(56, 73, 206, 0.16);
+}
+
+.skill-icon {
+  font-size: 1.8rem;
+  margin-right: 8px;
+}
+
+.skill-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #26308d;
+}
+
+.skill-items {
+  font-size: 1.13rem;
+  color: #5d647b;
+}
+
+
+      
 </style>
 </head>
 
@@ -351,13 +414,37 @@ body {
   </section>
 
   <!-- About Section -->
-  <section class="history-section" id="about">
+  <!-- <section class="history-section" id="about">
     <div class="history-content">
       <h2>About Me</h2>
       <p>Hello! I’m Jainag, a data enthusiast with a background in analyzing, visualizing, and interpreting data. My journey into data analytics started with curiosity about patterns and insights hidden in numbers, and it quickly grew into a career path.</p>
       <p>I enjoy working with tools like Python, SQL, Excel, and Tableau to solve real-world problems. Whether it’s optimizing processes, finding trends, or building dashboards, I believe in using data to drive smarter decisions.</p>
     </div>
-  </section>
+  </section> -->
+
+  <section class="history-section skills-section" id="skills">
+  <div class="history-content">
+    <h2 class="skills-title">Skills</h2>
+    <div class="skills-list">
+      <div class="skill-category">
+        <span class="skill-icon">🖥️</span>
+        <span class="skill-label">Programming & Analysis:</span>
+        <span class="skill-items">Python (Pandas, NumPy, Matplotlib), SQL, R</span>
+      </div>
+      <div class="skill-category">
+        <span class="skill-icon">📊</span>
+        <span class="skill-label">Visualization:</span>
+        <span class="skill-items">Tableau, Power BI, Excel (Pivot Tables, Charts)</span>
+      </div>
+      <div class="skill-category">
+        <span class="skill-icon">⚙️</span>
+        <span class="skill-label">Other:</span>
+        <span class="skill-items">Data Cleaning, Data Storytelling, Statistical Analysis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Projects Section -->
   <section class="interests" id="projects">
