@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jainag Bhuvan | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+     -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jainag Bhuvan | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-    
+  <meta property="og:title" content="Jainag Bhuvan | Portfolio">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.png">
     <style>
 * {
   margin: 0;
@@ -240,7 +248,7 @@ body {
 .inter img {
   width: 100px;
   margin-bottom: 1rem;
-  filter: invert(100%);
+  /* filter: invert(100%); */
 }
 
 /* === Animations === */
@@ -321,9 +329,9 @@ body {
   <section class="hero-section" id="home">
     <img src="image.png" alt="Profile photo of Jainag Bhuvan" class="hero-image">
     <div class="hero-content">
-      <h1 class="hero-title">Jainag Bhuvan</h1>
-      <p class="hero-subtitle">Aspiring Data Analyst | Problem Solver | Storyteller with Data</p>
-      <p class="hero-description">I am passionate about uncovering insights from data and transforming raw numbers into actionable strategies. With skills in data visualization, statistical analysis, and business intelligence tools, I aim to bridge the gap between data and decision-making.</p>
+      <h1 class="hero-title"> Bhuvan J N</h1>
+      <p class="hero-subtitle">DevOps Engineer | AWS Cloud Architect | Problem Solver </p>
+      <p class="hero-description">I am passionate about architecting resilient and scalable cloud solutions on AWS and transforming complex infrastructure needs into automated, repeatable workflows. With skills in infrastructure as code (Terraform, CloudFormation), CI/CD pipelines (CodePipeline, Jenkins), and monitoring (CloudWatch, Prometheus), I aim to bridge the gap between development and operations.</p>
       <a href="#projects"><button class="hero-button">View My Work</button></a>
     </div>
   </section>
@@ -332,8 +340,16 @@ body {
   <section class="history-section" id="about">
     <div class="history-content">
       <h2>About Me</h2>
-      <p>Hello! I’m Jainag, a data enthusiast with a background in analyzing, visualizing, and interpreting data. My journey into data analytics started with curiosity about patterns and insights hidden in numbers, and it quickly grew into a career path.</p>
-      <p>I enjoy working with tools like Python, SQL, Excel, and Tableau to solve real-world problems. Whether it’s optimizing processes, finding trends, or building dashboards, I believe in using data to drive smarter decisions.</p>
+      <p>I am a final-year BCA student at KLES Degree College, Nagarbhavi, with a strong interest in Cloud Computing, AWS, and DevOps. I am currently gaining hands-on experience through a DevOps with AWS internship, where I work with core cloud concepts and real-world infrastructure workflows.
+<p>
+I have practical exposure to AWS services such as EC2, EBS, AMIs, Snapshots, Security Groups, and IAM, along with Linux fundamentals and server management using tools like MobaXterm. I focus on understanding not just how things work, but why they work, building a strong foundation for scalable and reliable systems.
+</p>
+<p>
+Alongside cloud and DevOps, I am an aspiring full-stack developer with experience in HTML, CSS, JavaScript, React, Next.js, Node.js, MongoDB, and API development. I enjoy building projects that combine backend logic, frontend usability, and cloud deployment. I have also won 1st place in my college coding competition, which reflects my problem-solving mindset and technical curiosity.
+</p>
+<p>
+I am highly motivated, consistent in learning, and actively working on projects to strengthen my skills in DevOps automation, cloud architecture, and modern web development. I am seeking opportunities where I can learn, contribute, and grow as a Cloud / DevOps Engineer or Software Developer.</p>
+</p>
     </div>
   </section>
 
@@ -341,7 +357,7 @@ body {
   <section class="interests" id="projects">
     <h2 class="section-title">Projects</h2>
     <div class="interests-wrapper">
-      <div class="inter" onclick="window.location.href='https://app.powerbi.com/groups/me/dashboards/42c0d89e-f649-4e20-a107-3579bbedccdb?ctid=840f859c-9de6-42e1-bb24-49ee394e5505&pbi_source=linkShare'">
+      <!-- <div class="inter" onclick="window.location.href='https://app.powerbi.com/groups/me/dashboards/42c0d89e-f649-4e20-a107-3579bbedccdb?ctid=840f859c-9de6-42e1-bb24-49ee394e5505&pbi_source=linkShare'">
         <img src="ZDA.png" alt="Sales Dashboard" class="interestImg">
         <h3>Zomato Dataset Analysis</h3>
         <p>In this project, I got an opportunity to create an interactive dashboard in Power BI Service using a Zomato dataset sourced from Kaggle. The data was cleaned, transformed, and visualized in Power BI Desktop to derive insights related to restaurant pricing, ratings, popularity, and cuisine performance across multiple cities.</p>
@@ -356,6 +372,30 @@ body {
         <h3>Amazon sales data analysis</h3>
         <p>I worked with a Kaggle dataset of 120K+ rows, tackling missing values and inconsistencies using Python (Pandas). Performed extensive data cleaning and transformation to prepare it for analysis. Used SQL to filter, aggregate, and reshape the data for deeper insights. Built an interactive Power BI dashboard showing category-wise sales, monthly trends, city performance, and promo impact. Published the dashboard via Power BI Service (Microsoft Fabric) for seamless sharing and collaboration.</p>
       </div>
+    </div> -->
+      <div class="inter" onclick="window.location.href='https://github.com/Jnbhuvan/next-docker'">
+        <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/d2246d4e-06c0-5e3e-a16e-f9bcfe228c85/ff3982e7-8eb6-5893-b2ed-0d9d94afa737.jpg" alt="Survey Analysis" class="interestImg">
+        <h3>Dockerization of Next.js App</h3>
+        <p>Containerized a Next.js web application using Docker for improved deployment consistency and scalability.
+           <br><b> Click Here to view the project</b>
+        </p>
+      </div>
+    
+      <div class="inter"  onclick="window.open('https://grocer-todo.vercel.app/', '_blank')">
+        <img src="favicon.ico" alt="Customer Segmentation" class="interestImg">
+        <h3>GrocerTodo - A Todo Full stack web app </h3>
+        <p>A modern, full-stack web application for managing your grocery list. Built with Next.js and deployed on Vercel, this app allows you to seamlessly add, view, and manage your grocery items in real-time.
+           <br><b>Click Here to view the project</b>
+        </p>
+      </div>
+    
+      <div class="inter" onclick="window.location.href=''">
+        <img src="ZDA.png" alt="" class="interestImg">
+        <h3>Quick-Cart E-Commerce WebApp</h3>
+        <p>A modern, full-stack e-commerce web application built with Next.js and deployed on Vercel. Features include product listings, cart management, and user authentication.
+                 </p>
+      </div>
+      
     </div>
   </section>
 
@@ -364,7 +404,9 @@ body {
     <div class="history-content">
       <h2>Skills</h2>
       <p><strong>Programming & Analysis:</strong> Python (Pandas, NumPy, Matplotlib), SQL, R</p>
-      <p><strong>Visualization:</strong> Tableau, Power BI, Excel (Pivot Tables, Charts)</p>
+      <p><strong>DevOps:</strong> Docker, Git, GitHub Actions</p>
+      <p><strong>Cloud:</strong> AWS (EC2, S3, Lambda)</p>
+      
       <p><strong>Other:</strong> Data Cleaning, Data Storytelling, Statistical Analysis</p>
     </div>
   </section>
@@ -377,12 +419,12 @@ body {
       <div class="inter">
         <img src="linkedin.png" alt="LinkedIn" class="interestImg">
         <h3>LinkedIn</h3>
-        <p><a href="https://www.linkedin.com/in/bhuvan-jn/" target="_blank" style="color:#fff;">linkedin.com/in/jainag</a></p>
+        <p><a href="https://www.linkedin.com/in/bhuvan-jn/" target="_blank" style="color:#fff;">linkedin</a></p>
       </div>
       <div class="inter">
         <img src="github.png" alt="GitHub" class="interestImg">
         <h3>GitHub</h3>
-        <p><a href="https://github.com/Jnbhuvan" target="_blank" style="color:#fff;">github.com/jainag</a></p>
+        <p><a href="https://github.com/Jnbhuvan" target="_blank" style="color:#fff;">github.com</a></p>
       </div>
       <div class="inter">
         <img src="gmail.png" alt="Email" class="interestImg">
